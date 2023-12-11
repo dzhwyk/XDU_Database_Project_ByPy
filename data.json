@@ -1,0 +1,83 @@
+{
+    "team": [
+        {
+            "team_id": "1",
+            "team_name": "Team 1"
+        },
+        {
+            "team_id": "2",
+            "team_name": "Team 2"
+        }
+    ],
+    "route": [
+        {
+            "route_id": "1",
+            "route_name": "Route 1",
+            "team_id": "1"
+        },
+        {
+            "route_id": "2",
+            "route_name": "Route 2",
+            "team_id": "2"
+        }
+    ],
+    "vehicle": [
+        {
+            "vehicle_id": "1",
+            "route_id": "1",
+            "vehicle_capacity":"10"
+        },
+        {
+            "vehicle_id": "2",
+            "route_id": "2",
+            "vehicle_capacity":"10"
+        }
+    ],  
+    "team_captain":[
+        {
+            "team_captain_id": "1",
+            "team_captain_name": "Team Captain 1",
+            "team_id": "1"
+        },
+        {
+            "team_captain_id": "2",
+            "team_captain_name": "Team Captain 2",
+            "team_id": "2"
+        }
+    ],
+    "driver": [
+        {
+            "driver_id": "1",
+            "driver_name": "Driver 1",
+            "driver_gender":"male",
+            "is_route_captain":"0",
+            "route_id": "1"
+        },
+        {
+            "driver_id": "2",
+            "driver_name": "Driver 2",
+            "driver_gender":"male",
+            "is_route_captain":"1",
+            "route_id": "2"
+        }
+    ],
+    "violation":[
+        {
+            "violation_id": "1",
+            "violation_name": "Violation 1",
+            "violation_time": "2023-12-10 10:01:00",
+            "driver_id": "1",
+            "vehicle_id":"1",
+            "route_id":"1"
+
+        },
+        {
+            "violation_id": "2",
+            "violation_name": "Violation 2",
+            "violation_time": "2023-12-10 10:01:00",
+            "driver_id": "2",
+            "vehicle_id":"2",
+            "route_id":"2"
+        }
+    ]
+}
