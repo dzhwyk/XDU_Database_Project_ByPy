@@ -127,22 +127,23 @@ def insert_driver_info(cursor):
 
 
 # 插入车辆信息
-# 接受的数据：车辆ID，车辆所属路线ID
+# 接受的数据：车辆ID，车辆所属路线ID，车辆载客量
 def insert_vhicle_info(cursor):
     vehicle_id = input("请输入车辆ID: ")
     route_id = input("请输入车辆所属路线ID: ")
+    vehicle_capacity = input("请输入车辆载客量: ")
 
     query = """
         INSERT INTO vehicle (
-            vehicle_id,route_id
+            vehicle_id,route_id,vehicle_capacity
         ) 
         VALUES (
-            %s,%s
+            %s,%s,%s
         );
     """
 
     try:
-        cursor.execute(query, (vehicle_id, route_id))
+        cursor.execute(query, (vehicle_id, route_id, vehicle_capacity))
         print("车辆信息录入成功！")
     except pymysql.Error as err:
         print(f"录入车辆信息失败: {err}")
